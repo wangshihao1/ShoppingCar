@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tools:context=".ui.activity.MainActivity">
+
+            <CheckBox
+                android:id="@+id/cb_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fresco:layout_constraintTop_toTopOf="parent"
+                fresco:layout_constraintBottom_toBottomOf="parent"
+                fresco:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_goodsIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                fresco:layout_constraintLeft_toRightOf="@id/cb_goods"
+                android:paddingLeft="5dp"
+                android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tv_goodsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="商品名称"
+                    android:maxEms="20"
+                    fresco:layout_constraintTop_toTopOf="parent"
+                    fresco:layout_constraintLeft_toRightOf="@id/iv_goodsIcon"
+                    android:layout_marginLeft="30dp"
+                    android:paddingLeft="5dp"
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_goodsPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:hint="商品价格"
+                    fresco:layout_constraintTop_toBottomOf="@id/tv_goodsTitle"
+                    fresco:layout_constraintLeft_toRightOf="@id/iv_goodsIcon"
+                    android:layout_marginLeft="30dp"
+                    />
+                <com.bawei.shoppingcar.ui.custom.CustomView
+                    android:id="@+id/custom_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fresco:layout_constraintTop_toBottomOf="@id/tv_goodsTitle"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="50dp"
+                    >
+                </com.bawei.shoppingcar.ui.custom.CustomView>
+
+</android.support.constraint.ConstraintLayout>

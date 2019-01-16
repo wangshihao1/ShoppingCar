@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+   <com.scwang.smartrefresh.layout.SmartRefreshLayout
+       android:id="@+id/smart"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="9"
+       >
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/cycle"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+       </android.support.v7.widget.RecyclerView>
+
+   </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+     <CheckBox
+         android:id="@+id/ck_select"
+         android:layout_width="70dp"
+         android:layout_height="wrap_content"
+         android:text="全选"
+         android:layout_gravity="center_vertical"
+         android:layout_weight="1"
+         />
+     <TextView
+         android:id="@+id/tv_total"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_vertical"
+         android:layout_marginLeft="110dp"
+         android:text="￥总价"
+         android:layout_weight="2"
+         />
+     <Button
+         android:id="@+id/btn_js"
+         android:layout_width="80dp"
+         android:layout_height="wrap_content"
+         android:text="结算"
+         android:layout_weight="1"
+         android:layout_gravity="center_vertical"
+         />
+    </LinearLayout>
+</LinearLayout>
